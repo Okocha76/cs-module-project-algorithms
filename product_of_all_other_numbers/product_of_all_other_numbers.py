@@ -3,9 +3,18 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def product_of_all_other_numbers(arr):
-    # Your code here
+    prod_all_other = [0] * len(arr)
 
-    pass
+    for k in range(len(arr)):
+        temp = arr.copy()
+        temp[k] = 1
+        sumproduct = 1
+        for j in temp:
+            sumproduct = sumproduct * j
+        prod_all_other[k] = sumproduct
+
+    return prod_all_other
+
 
 
 if __name__ == '__main__':

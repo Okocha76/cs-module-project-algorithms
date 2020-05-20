@@ -3,9 +3,19 @@ Input: a List of integers
 Returns: a List of integers
 '''
 def moving_zeroes(arr):
-    # Your code here
+    # create zeroes array with len(arr)
+    moved_zeroes = [0] * len(arr)
 
-    pass
+    i = 0
+
+    # loop through array
+    for k in range(len(arr)):
+        # if element is non-zero, overwrite from left
+        if arr[k] != 0:
+            moved_zeroes[i] = arr[k]
+            i += 1
+
+    return moved_zeroes
 
 
 if __name__ == '__main__':
